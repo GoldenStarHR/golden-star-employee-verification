@@ -3,67 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Golden Star Hotel & Resorts</title>
+<title>Golden Star Hotel & Resorts - Employee Verification</title>
 
 <style>
-
 body{
 margin:0;
 padding:0;
-background:#0d0d0d;
-font-family:Arial,Helvetica,sans-serif;
+background:#111;
+font-family:Arial,sans-serif;
 color:white;
 }
 
 .container{
-width:90%;
 max-width:900px;
-margin:40px auto;
-background:#1a1a1a;
+margin:30px auto;
+background:#1b1b1b;
 padding:30px;
 border-radius:15px;
-border:3px solid gold;
+border:2px solid gold;
+box-shadow:0 0 20px gold;
 text-align:center;
-box-shadow:0px 0px 20px gold;
 }
 
-.logo{
-font-size:38px;
-font-weight:bold;
+h1{
 color:gold;
 }
 
-.subtitle{
-font-size:20px;
-margin-top:10px;
-color:#ffffff;
+button{
+background:gold;
+color:black;
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.card{
+display:none;
+margin-top:30px;
+background:#222;
+padding:25px;
+border-radius:15px;
+text-align:left;
+}
+
+.photo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.photo img{
+width:160px;
+height:190px;
+object-fit:cover;
+border-radius:12px;
+border:3px solid gold;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td{
+padding:10px;
+border-bottom:1px solid #444;
+}
+
+.title{
+color:gold;
+font-weight:bold;
+width:220px;
 }
 
 .verify{
-margin-top:30px;
-font-size:30px;
-font-weight:bold;
+font-size:28px;
 color:#00ff66;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:gold;
-color:black;
-text-decoration:none;
+text-align:center;
+margin-bottom:20px;
 font-weight:bold;
-border-radius:8px;
-font-size:20px;
 }
-
-.footer{
-margin-top:40px;
-font-size:15px;
-color:#cccccc;
-}
-
 </style>
 
 </head>
@@ -72,32 +93,86 @@ color:#cccccc;
 
 <div class="container">
 
-<div class="logo">
-⭐ GOLDEN STAR HOTEL & RESORTS
-</div>
+<h1>⭐ GOLDEN STAR HOTEL & RESORTS</h1>
 
-<div class="subtitle">
-Employee Verification System
-</div>
+<h2>Employee Verification Portal</h2>
+
+<button onclick="showEmployee()">
+Verify Employee
+</button>
+
+<div class="card" id="employee">
 
 <div class="verify">
-🟢 VERIFIED EMPLOYEE PORTAL
+✅ VERIFIED EMPLOYEE
 </div>
 
-<p style="font-size:20px;">
-Welcome to the official employee verification portal of
-<b>Golden Star Hotel & Resorts.</b>
-</p>
+<div class="photo">
+<img src="https://via.placeholder.com/160x190.png?text=Employee+Photo">
+</div>
 
-<a class="btn" href="#">
-Verify Employee
-</a>
+<table>
 
-<div class="footer">
-© 2026 Golden Star Hotel & Resorts
+<tr>
+<td class="title">Employee ID</td>
+<td>GSHR-10-03-SRD1999</td>
+</tr>
+
+<tr>
+<td class="title">Employee Name</td>
+<td>Dipendra Singh</td>
+</tr>
+
+<tr>
+<td class="title">Father Name</td>
+<td>Balveer Singh</td>
+</tr>
+
+<tr>
+<td class="title">Designation</td>
+<td>Executive Chef</td>
+</tr>
+
+<tr>
+<td class="title">Department</td>
+<td>F&B Production (Kitchen)</td>
+</tr>
+
+<tr>
+<td class="title">Joining Date</td>
+<td>10/03/2026</td>
+</tr>
+
+<tr>
+<td class="title">Mobile</td>
+<td>7737375283</td>
+</tr>
+
+<tr>
+<td class="title">Address</td>
+<td>Morena, Madhya Pradesh</td>
+</tr>
+
+<tr>
+<td class="title">Status</td>
+<td style="color:#00ff66;"><b>ACTIVE EMPLOYEE</b></td>
+</tr>
+
+</table>
+
 </div>
 
 </div>
+
+<script>
+
+function showEmployee(){
+
+document.getElementById("employee").style.display="block";
+
+}
+
+</script>
 
 </body>
 </html>
